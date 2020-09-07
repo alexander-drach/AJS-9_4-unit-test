@@ -85,3 +85,25 @@ test('sort test toEqual reverse', () => {
 
   expect(result).toEqual(sortArr);
 });
+
+test('sort test toEqual five elements', () => {
+  const arr = [
+    { name: 'мечник', health: 10 },
+    { name: 'лучник', health: 80 },
+    { name: 'маг', health: 100 },
+    { name: 'xxx', health: 70 },
+    { name: 'yyy', health: 150 },
+  ];
+
+  const sortArr = [
+    { name: 'yyy', health: 150 },
+    { name: 'маг', health: 100 },
+    { name: 'лучник', health: 80 },
+    { name: 'xxx', health: 70 },
+    { name: 'мечник', health: 10 },
+  ];
+
+  const result = sortPerson(arr);
+
+  expect(result).toEqual(sortArr);
+});
